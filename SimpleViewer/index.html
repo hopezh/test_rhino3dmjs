@@ -44,8 +44,8 @@
     <script src="https://cdn.jsdelivr.net/npm/rhino3dm/rhino3dm.min.js"></script>
     <!-- latest -->
     <script>
-      var rhino_file_path = "./3dm/b02.3dm";
-      // var rhino_file_path = "hello_mesh.3dm";
+      var rhino_file_path = "../3dm/b02_mesh.3dm";
+      // var rhino_file_path = "../3dm/hello_mesh.3dm";
       let fetchPromise = fetch(rhino_file_path);
       console.log("fetch promise:", fetchPromise);
 
@@ -87,11 +87,8 @@
           1,
           100000
         );
-        camera.position.set(26, -40, 10);
-        // camera.position.set(1000, 1000, 100);
-
-        const light = new THREE.AmbientLight(0x404040); // soft white light
-        scene.add(light);
+        camera.position.set(-10, 10, 50);
+        // camera.position.set(1000, 1000, 1000);
 
         renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
